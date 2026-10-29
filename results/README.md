@@ -36,6 +36,11 @@ errores de ejecución. Esta configuración no se ajustó mediante una búsqueda
 de rendimiento. Los efectos de WDDM, carga del equipo y frecuencia de la GPU
 deben considerarse al interpretar las mediciones.
 
+Resumen robusto (medianas por tamaño):
+[`summary_medians.csv`](summary_medians.csv). El informe final con tabla
+comparativa, cálculo de speedup y discusión está en
+[`docs/informe.md`](../docs/informe.md).
+
 Para repetir desde la raíz del repositorio:
 
 ```powershell
@@ -47,6 +52,4 @@ python -m venv .venv
 
 Usar Python 3.14 en Windows x64 para reproducir este entorno exacto.
 Cada benchmark crea una carpeta nueva y conserva las corridas anteriores.
-El diseño y las decisiones se explican en
-[`docs/diseno_cuda.md`](../docs/diseno_cuda.md). Quedan para el integrante 3
-el análisis estadístico, las gráficas y la redacción del informe final.
+Diseño CUDA: [`docs/diseno_cuda.md`](../docs/diseno_cuda.md).

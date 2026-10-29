@@ -2,36 +2,31 @@
 
 Se aproxima la integral de
 `f(x) = 4 / (1 + x²)` en `[0, 1]` mediante la regla del punto medio. Su valor
-exacto es `π`. Se incluyen las implementaciones CPU y CUDA, pruebas y un
-recolector de corridas. El análisis de los datos y el informe final quedan
-para el integrante 3.
+exacto es `π`. El repositorio cubre las tres entregas: CPU secuencial, kernel
+CUDA con reducción, benchmark e [informe final](docs/informe.md).
 
-## Ejecutar GPU y consultar corridas
+## Ejecutar
+
+Desde la raíz del proyecto (Windows con `.venv` o Linux/macOS con el intérprete
+activo):
+
+```bash
+python -m src.sequential
+python -m unittest discover -s tests -v
+python -m src.benchmark --trials 10   # requiere GPU NVIDIA real
+```
+
+En PowerShell con el entorno aislado de las corridas documentadas:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 .\.venv\Scripts\python.exe -m src.benchmark --trials 10
 ```
 
-Las corridas reales y la configuración de esta máquina se referencian en
-[`results/README.md`](results/README.md). Cada ejecución guarda un CSV nuevo,
-con diez repeticiones por tamaño, y metadatos del entorno. La metodología,
-el diseño de kernels y las instrucciones de traspaso están en
-[`docs/diseno_cuda.md`](docs/diseno_cuda.md).
-
-## Ejecutar
-
-Desde esta carpeta, con Python 3.10 o posterior:
-
-```powershell
-python -m src.sequential
-python -m unittest discover -s tests -v
-```
-
-La implementación CPU usa solamente la biblioteca estándar. El entorno aislado
-`.venv` incluye las dependencias de `requirements.txt` para ejecutar CUDA.
-Los casos de entrada se definen en `src/data.py` y son
-deterministas: no se generan muestras aleatorias ni se materializan arreglos.
+La CPU usa solo la biblioteca estándar. Los casos de `src/data.py` son
+deterministas. Las corridas reales están en [`results/README.md`](results/README.md);
+el diseño CUDA en [`docs/diseno_cuda.md`](docs/diseno_cuda.md); el análisis de
+speedup y la discusión en [`docs/informe.md`](docs/informe.md).
 
 ## Registro previo del integrante 1 (28 de octubre de 2026)
 
@@ -69,13 +64,10 @@ python -c "from numba import cuda; print(cuda.is_available()); cuda.detect()"
 `nvidia-smi` informa la capacidad del controlador; la disponibilidad de las
 bibliotecas CUDA se comprobó por separado en `.venv`.
 
-## Entrega H1
+## Entregas
 
-- Algoritmo, entradas, tamaños y memoria: `docs/flujo_secuencial.md`.
-- Implementación CPU: `src/sequential.py`.
-- Casos compartidos para CPU/GPU: `src/data.py`.
-- Pruebas CPU: `tests/test_sequential.py`.
-
-El integrante 2 debe importar `IntegrationInput` y `PERFORMANCE_CASES` desde
-`src.data`, respetar la misma función, intervalo, precisión `float64` y regla
-del punto medio, y comparar con `run_sequential(case)`.
+| Hito | Contenido |
+|---|---|
+| H1 | `docs/flujo_secuencial.md`, `src/sequential.py`, `src/data.py`, `tests/test_sequential.py` |
+| H2 | `docs/diseno_cuda.md`, `src/cuda_impl.py`, `tests/test_correctness.py` |
+| H3 | `src/benchmark.py`, `results/20261029T015937Z/`, `docs/informe.md` |
