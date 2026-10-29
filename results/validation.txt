@@ -1,0 +1,23 @@
+test_shared_and_boundary_cases (test_correctness.CudaCorrectnessTests.test_shared_and_boundary_cases) ... C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 40 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 4 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+ok
+test_convergence_to_pi (test_sequential.SequentialTests.test_convergence_to_pi) ... ok
+test_invalid_inputs (test_sequential.SequentialTests.test_invalid_inputs) ... ok
+test_one_rectangle (test_sequential.SequentialTests.test_one_rectangle) ... ok
+test_shared_inputs (test_sequential.SequentialTests.test_shared_inputs) ... ok
+test_two_rectangles_manual_sum (test_sequential.SequentialTests.test_two_rectangles_manual_sum) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.076s
+
+OK

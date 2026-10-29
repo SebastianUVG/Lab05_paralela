@@ -1,0 +1,11 @@
+{
+  "rows": 30,
+  "all_correct": true,
+  "trials_per_n": {
+    "10000": 10,
+    "100000": 10,
+    "1000000": 10
+  },
+  "max_absolute_error": 1.1235457009206584e-13,
+  "timing_sums_verified": true
+}

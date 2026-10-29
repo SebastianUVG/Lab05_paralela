@@ -1,9 +1,23 @@
-# Actividad CUDA: sumas de Riemann (integrante 1)
+# Actividad CUDA: sumas de Riemann CPU/GPU
 
-Esta entrega cubre las fases 1 a 3 de la guía. Se aproxima la integral de
+Se aproxima la integral de
 `f(x) = 4 / (1 + x²)` en `[0, 1]` mediante la regla del punto medio. Su valor
-exacto es `π`. La versión CUDA, la comparación de tiempos y el informe final
-corresponden a los integrantes 2 y 3.
+exacto es `π`. Se incluyen las implementaciones CPU y CUDA, pruebas y un
+recolector de corridas. El análisis de los datos y el informe final quedan
+para el integrante 3.
+
+## Ejecutar GPU y consultar corridas
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m src.benchmark --trials 10
+```
+
+Las corridas reales y la configuración de esta máquina se referencian en
+[`results/README.md`](results/README.md). Cada ejecución guarda un CSV nuevo,
+con diez repeticiones por tamaño, y metadatos del entorno. La metodología,
+el diseño de kernels y las instrucciones de traspaso están en
+[`docs/diseno_cuda.md`](docs/diseno_cuda.md).
 
 ## Ejecutar
 
@@ -15,11 +29,15 @@ python -m unittest discover -s tests -v
 ```
 
 La implementación CPU usa solamente la biblioteca estándar. El entorno aislado
-`.venv` incluye las dependencias de `requirements.txt` para comprobar que CUDA
-está disponible antes de la fase 2. Los casos de entrada se definen en `src/data.py` y son
+`.venv` incluye las dependencias de `requirements.txt` para ejecutar CUDA.
+Los casos de entrada se definen en `src/data.py` y son
 deterministas: no se generan muestras aleatorias ni se materializan arreglos.
 
-## Entorno comprobado el 28 de octubre de 2026
+## Registro previo del integrante 1 (28 de octubre de 2026)
+
+Este registro corresponde al equipo anterior; las corridas nuevas usan otra
+GPU y otro Python. Consultar `results/README.md` y `environment.json` para
+la configuración medida en esta entrega.
 
 | Elemento | Resultado |
 |---|---|
@@ -36,8 +54,8 @@ En el Python global, `cuda.is_available()` dio `False`: faltaban bibliotecas
 CUDA como `nvvm.dll`, `nvrtc.dll` y `cudart.dll`. Se resolvió creando `.venv`
 e instalando `numba-cuda[cu12]` y sus dependencias desde `requirements.txt`,
 siguiendo la [guía de instalación de NVIDIA](https://nvidia.github.io/numba-cuda/user/installation.html).
-La GPU quedó detectable en ese entorno. No se implementó ni ejecutó un kernel;
-esa validación corresponde al integrante 2.
+La GPU quedó detectable en ese entorno. En ese registro inicial no se había
+implementado ni ejecutado un kernel.
 
 Para reproducir el entorno local:
 

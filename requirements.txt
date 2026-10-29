@@ -1,5 +1,6 @@
-# Dependencias para comprobar el entorno CUDA local y continuar en la fase 2.
-numpy==2.2.3
-numba==0.67.0
+# Entorno de las corridas GPU: Python 3.14, Windows x64.
+# Versiones transitivas completas en results/requirements-lock.txt.
+numpy==2.3.5
+numba==0.68.1
 numba-cuda[cu12]==0.30.4
 

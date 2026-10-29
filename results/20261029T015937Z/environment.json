@@ -1,0 +1,29 @@
+{
+  "started_utc": "20261029T015937Z",
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "compute_capability": [
+    8,
+    6
+  ],
+  "threads_per_block": 256,
+  "trials_per_size": 10,
+  "rtol": 1e-11,
+  "atol": 1e-12,
+  "simulator": false,
+  "packages": {
+    "numpy": "2.3.5",
+    "numba": "0.68.1",
+    "numba-cuda": "0.30.4",
+    "cuda-bindings": "12.9.10"
+  },
+  "source_sha256": {
+    "src/data.py": "e540e31f2567cc4f9f42eaea8b539792fe743c13d0b2117f09469757f6018af4",
+    "src/sequential.py": "a4eb9cbfd624c972dcc9d86e253954c4e60f307418b8b17cac68ac16f2dc2233",
+    "src/cuda_impl.py": "9d9ebfae019d41b57907b9e45c71d07e40cb1d7f225f1d4ce3fe26ce2fe60aa3",
+    "src/benchmark.py": "3ebe86258ca40ca1f00755f64fec7bb20a822ccf82c3b6e26da30e2cf1a34fb4"
+  },
+  "nvidia_smi": "Wed Oct 28 19:59:37 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 592.82                 Driver Version: 592.82         CUDA Version: 13.1     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   51C    P3              5W /   35W |      81MiB /   6144MiB |     17%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A           21904      C   C:\\Python314\\python.exe               N/A      |\n|    0   N/A  N/A           31416    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+  "method": "Una ejecuci\u00f3n CPU y GPU de calentamiento por tama\u00f1o, excluidas. Despu\u00e9s CPU seguida de GPU por repetici\u00f3n. Total CUDA incluye reservas, H2D, todos los kernels de reducci\u00f3n y D2H; excluye contexto, JIT, preparaci\u00f3n de par\u00e1metros y liberaci\u00f3n posterior. Transferencias de entrada: 24 bytes; salida: 8 bytes. Cron\u00f3metro de pared perf_counter, GPU sincronizada."
+}

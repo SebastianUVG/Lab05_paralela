@@ -1,0 +1,12 @@
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 40 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 1 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+n=10000: 10 corridas guardadas
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 2 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+n=100000: 10 corridas guardadas
+C:\Users\flami\Documents\uvg\Lab05_paralela\.venv\Lib\site-packages\numba_cuda\numba\cuda\dispatcher.py:748: NumbaPerformanceWarning: Grid size 16 will likely result in GPU under-utilization due to low occupancy.
+  warn(errors.NumbaPerformanceWarning(msg))
+n=1000000: 10 corridas guardadas
+results\20261029T015937Z
