@@ -1,0 +1,5 @@
+# Dependencias para comprobar el entorno CUDA local y continuar en la fase 2.
+numpy==2.2.3
+numba==0.67.0
+numba-cuda[cu12]==0.30.4
+
